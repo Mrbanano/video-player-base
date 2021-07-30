@@ -1,38 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.google.com/share?selection.family=Poppins:wght@400;500;700"
-    rel="stylesheet">
-  <link rel="stylesheet" href="./css/index.css">
-  <link rel="stylesheet" href="./css/fonts.css">
-  <title>Video pLayer</title>
-</head>
-<body>
-  <div class="wrapper">
-    <div class="player">
-      <video id="video"  muted poster="./images/poster.png"  src="https://media.w3.org/2010/05/sintel/trailer.mp4" width="400"></video>
-      <div class="player-overlay">
-        <h2 class="player-title">Música para programar</h2>
-        <div class="player-actions">
-          <button class="button" id="backward" aria-label="Retroceder 10 segundos" title="Retroceder 10 segundos"></button>
-          <button class="button" id="play" aria-label="Reproducir" title="Reproducir"></button>
-          <button class="button" hidden id="pause" aria-label="Pausar" title="Pausar"></button>
-          <button class="button" id="forward" aria-label="Adelantar 10 segundos" title="Adelantar 10 segundos"></button>
-        </div>
-        <div class="player-progress">
-          <input id="progress" type="range" min="0" value="0" step="1">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="shortcut icon" href="./icons/video.png" type="image/x-icon">
+    <title>Video pLayer</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="player">
+        <video
+          id="video"
+          poster="./images/poster.png"
+          src="https://r6---sn-0opoxu-2cje7.googlevideo.com/videoplayback?expire=1627703125&ei=9XIEYaz3HMb18gSMoaOYDQ&ip=198.181.163.247&id=o-AIFnrbQYtKuT6wLpLl5xk6-dtzRIEwo6npt2Ore9plEF&itag=18&source=youtube&requiressl=yes&vprv=1&mime=video%2Fmp4&ns=biP9PSYhLxZtKkvbNMytV0gG&gir=yes&clen=13849931&ratebypass=yes&dur=208.050&lmt=1626523881973615&fexp=24001373,24007246&c=WEB&txp=5530434&n=jwMMNgcoxeOTvSB9Q&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cvprv%2Cmime%2Cns%2Cgir%2Cclen%2Cratebypass%2Cdur%2Clmt&sig=AOq0QJ8wRQIhAMTRt3RxcFF6uP9DSu_VNUnOMYgjoITfwhpzw_3dlnKQAiBDsUYgMzy937jjbfTXulGXrjGtMZ-bYWwDrwjlJ8TEPA%3D%3D&redirect_counter=1&rm=sn-vgqyr7d&req_id=8ae817918ce2a3ee&cms_redirect=yes&ipbypass=yes&mh=r0&mip=2806:10a6:15:d77c:501:83b1:4d2a:195f&mm=31&mn=sn-0opoxu-2cje7&ms=au&mt=1627681518&mv=m&mvi=6&pl=52&usequic=no&lsparams=ipbypass,mh,mip,mm,mn,ms,mv,mvi,pl,usequic&lsig=AG3C_xAwRQIhAOKszFG-w6HWv5S4tprsal0j3CpuoibN_k49RIxidZhNAiBqdsJhA-e_BKfUMbOer2uacu1jd1bwgyocM1VzNhhOOQ%3D%3D"
+          width="400"
+        ></video>
+        <div class="player-overlay">
+          <h2 class="player-title">Música para programar</h2>
+          <div class="player-actions">
+            <button
+              class="button"
+              id="backward"
+              aria-label="Retroceder 10 segundos"
+              title="Retroceder 10 segundos"
+            ></button>
+            <button
+              class="button"
+              id="play"
+              aria-label="Reproducir"
+              title="Reproducir"
+            ></button>
+            <button
+              class="button"
+              hidden
+              id="pause"
+              aria-label="Pausar"
+              title="Pausar"
+            ></button>
+            <button
+              class="button"
+              id="forward"
+              aria-label="Adelantar 10 segundos"
+              title="Adelantar 10 segundos"
+            ></button>
+          </div>
+          <div class="player-progress">
+            <input id="progress" type="range" min="0" value="0" step="1" />
+            <div class="player-volume">
+              <span class="volume-icon"></span>
+              <div class="player-volumen">
+                <input id="volumen" type="range" min="0" max="1" value="0.20" step="0.1" />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div> 
-  </div>
+    </div>
 
-  <script src="./js/index.js"></script>
-</body>
-</html>  
+    
+
+    <script src="./js/index.js"></script>
+  </body>
+</html>

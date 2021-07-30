@@ -1,0 +1,33 @@
+.player-volume{
+    display: flex;
+    width: 24px;
+    height: 24px;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    padding-inline-start: 10px;
+}
+
+.player-volumen{
+    position: absolute;
+    top: -85px;
+    transform: rotate(-90deg);
+    opacity: 0;
+}
+
+.volume-icon{
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background: url('../icons/volumen-bajo.svg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+}
+
+
+.player-volume:hover .player-volumen{
+ opacity: 1;
+}

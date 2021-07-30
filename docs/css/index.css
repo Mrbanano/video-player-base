@@ -1,25 +1,46 @@
-@import './buttons.css';
+@import "./buttons.css";
+@import "./player.css";
 
 :root {
-  --Primary: #43DDE6;
-  --White: #ffffff; 
-  
-  
+  --Primary: #43dde6;
+  --White: #ffffff;
 }
 
 body {
+  padding: 0;
+  margin: 0;
   background-color: var(--Primary);
-  font-family: Arial, Helvetica, sans-serif;
+  background-image: url('../images/desktop-player.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Poppins", sans-serif;
   color: var(--White);
+  height: 99.9vh;
+  overflow: hidden;
 }
 
-.wrapper{
+.wrapper {
   max-inline-size: 900px;
   margin-inline-start: auto;
   margin-inline-end: auto;
+  width: 900px;
+  position: absolute;
+  top: calc(50% - 270px);
+  left: calc(50% - 450px);
 }
 
-.player video{
-  inline-size: 100%;
-  
+
+@media only screen and (max-width: 600px) {
+  body{
+    background-image: url('../images/mobile-player.png');
+    height: 80vh;
+  }
+  .wrapper {
+    width: 100%;
+    position: static;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+    margin-block-start: 150px;
+  }
 }
